@@ -183,12 +183,7 @@
             <p style="margin: 0; color: #555;"></p>
             
             <div class="dati-banca">
-                <p><strong>IBAN:</strong> <span id="iban">IT32 F 3608 1051 3823 5231 1352 40</span></p>
-                <p><strong>Intestato a:</strong> Daniele Moschini</p>
-                <p><strong>Banca:</strong> Poste Italiane</p>
-                <p><strong>Causale:</strong> Regalo di Laurea Daniele</p>
-                
-                <button class="copy-btn" onclick="copyText('iban')">📋 Copia l'IBAN</button>
+                <img src="mio-iban.png" alt="Iban per il bonifico" style="max-width: 100%; height: auto; vertical-align: middle;">
             </div>
         <br>
         <br>
@@ -205,17 +200,6 @@
         </footer>
 
     </div>
-
-    <script>
-        function copyText(elementId) {
-            const text = document.getElementById(elementId).innerText;
-            navigator.clipboard.writeText(text).then(() => {
-                alert("IBAN copiato! Ora puoi incollarlo nell'app della tua banca.");
-            }).catch(err => {
-                console.error('Errore nel copia:', err);
-            });
-        }
-    </script>
 
 </body>
 </html>
