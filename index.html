@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laurea di [Il Tuo Nome]</title>
+    <style>
+        :root {
+            --primary-color: #0084ff;
+            --secondary-color: #2a9d8f;
+            --dark-color: #264653;
+            --light-color: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+        }
+
+        .container {
+            max-width: 650px; /* Più stretto e intimo, perfetto da leggere */
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: var(--dark-color);
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-top: 0;
+        }
+
+        /* Il box per la vostra foto di coppia */
+        .foto-coppia-container {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin-bottom: 35px;
+        }
+
+        .foto-coppia-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .messaggio-box {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .messaggio-box p {
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .divider {
+            height: 2px;
+            background-color: #d9f0ff;
+            width: 60px;
+            margin: 25px auto;
+        }
+
+        .info-regalo {
+            background: #d9f7ff;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #bce6ff;
+            text-align: center;
+        }
+
+        .info-regalo h2 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .dati-banca {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .dati-banca p {
+            margin: 8px 0;
+            font-size: 1.05rem;
+        }
+
+        .iban-text {
+            font-family: monospace;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--dark-color);
+            background: #f1f3f5;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            word-break: break-all; /* Evita che l'IBAN si tagli sui telefoni */
+        }
+
+        .copy-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            font-weight: bold;
+            width: 100%; /* Più grande e facile da cliccare per gli zii */
+        }
+
+        .copy-btn:hover {
+            background-color: #006cd4;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="header-section">
+            <h1>Il mio traguardo più grande 🎓</h1>
+            <h1>...e il viaggio dei nostri sogni.</h1>
+        </div>
+
+        <!-- FOTO DI VOI DUE: Sostituisci 'foto-coppia.jpg' con il nome della vostra foto -->
+        <div class="foto-coppia-container">
+            <h3 style="justify-self: center;">Io e Vanessa ❤️</h3>
+            <img src="noi.jpeg" alt="Io e Vanessa">
+        </div>
+
+        <div class="messaggio-box">
+            <p>Ciao a tutti! ❤️</p>
+            <p>Ci siamo quasi: la laurea è finalmente alle porte! </p>
+            
+            <div class="divider"></div>
+            
+            <p>Il regalo più bello che possiate farci non è un oggetto, ma un ricordo. Quest'estate io e <strong>Vanessa</strong> vorremmo partire per l'<strong>Olanda</strong>: sarà il nostro viaggio di celebrazione dopo questi anni di studio intenso.</p>
+            <p>Se vi fa piacere aiutarci a realizzare questo sogno, ogni piccolo pensiero si trasformerà in una tappa del nostro viaggio (una cena a base di specialità locali, un biglietto per un museo o una pedalata tra i canali!).</p>
+            
+            <p>Non c'è nessun obbligo, il regalo più grande resta avervi al mio fianco per festeggiare! 🥂</p>
+        </div>
+
+        <div class="info-regalo">
+            <h2>Un pensiero per il nostro viaggio ✈️</h2>
+            <p style="margin: 0; color: #555;"></p>
+            
+            <div class="dati-banca">
+                <p><strong>IBAN:</strong> <span id="iban">IT00 X 0000 0000 0000 0000 0000 000</span></p>
+                <p><strong>Intestato a:</strong> Daniele Moschini</p>
+                <p><strong>Banca:</strong> Poste Italiane</p>
+                <p><strong>Causale:</strong> Regalo di Laurea Daniele</p>
+                
+                <button class="copy-btn" onclick="copyText('iban')">📋 Copia l'IBAN</button>
+            </div>
+        <br>
+        <br>
+            <!-- OPZIONE PAYPAL SE TI PIACE, ALTRIMENTI CANCELLA DA QUI A FINE COMMENTO -->
+            
+            <a href="https://paypal.me/iltuolink" target="_blank" style="color: var(--primary-color); font-weight: bold; font-size: 1.25rem; text-decoration: none;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/PayPal_Logo_Icon_2014.svg" alt="PayPal Logo" style="width: 20px; height: auto;"> 
+            Oppure invia con PayPal cliccando qui</a>
+        </div>
+
+        <footer>
+            Grazie di cuore a tutti, vi voglio bene! <br>
+            Ci vediamo alla festa! 🎉
+        </footer>
+
+    </div>
+
+    <script>
+        function copyText(elementId) {
+            const text = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert("IBAN copiato! Ora puoi incollarlo nell'app della tua banca.");
+            }).catch(err => {
+                console.error('Errore nel copia:', err);
+            });
+        }
+    </script>
+
+</body>
+</html>
